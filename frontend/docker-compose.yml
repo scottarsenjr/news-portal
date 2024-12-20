@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  frontend:
+    container_name: 'vite'
+    build: .
+    ports:
+      - '4173:4173'
+    networks:
+      - web
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:4173" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  nginx_frontend:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - '80:80'
+    depends_on:
+      - frontend
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

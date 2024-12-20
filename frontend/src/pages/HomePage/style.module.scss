@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.newsWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.btn {
+  width: 20%;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.cardActions {
+  display: flex;
+  margin-top: 16px;
+  gap: 8px;
+}
