@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from '@/api/axios.ts';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
-import { Button, Card, Typography, Modal, message, Form, Input, Select } from 'antd';
+import { Button, Card, Typography, Modal, message, Form, Input } from 'antd';
 import { TNews } from '@/types/news';
 import styles from './style.module.scss';
 
-const { Title, Text, Paragraph } = Typography;
+const { Text, Paragraph } = Typography;
 const { TextArea } = Input;
 
 const NewsPage: React.FC = () => {
